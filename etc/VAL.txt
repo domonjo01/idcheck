@@ -1,0 +1,13 @@
+# Variable
+BADID=`who -m | awk '{ print $2 }'`
+BADTERM=`ps -ef | grep -i $BAEDID | grep -v bash | grep -v grep | awk '{ print $2 }' | head -1`
+DATETIME=`date '+%Y%m%d %H:%M:%S'`
+LOG=/root/Tools/log/idcheck.log
+
+# OUTPUT Messages
+MESSAGE1='ログイン理由がありません。Exitします。'
+MESSAGE2='社員番号'
+MESSAGE3='理由：'
+MESSAGE4='不正な社員番号です。ログインを拒否します。'
+MESSAGE5='ログイン理由を書いてください。'
+MESSAGE6='社員番号を入力してください。'
